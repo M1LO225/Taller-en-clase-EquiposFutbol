@@ -10,7 +10,7 @@ namespace Taller_en_clase_EquiposFutbol.Models
         public string NombreJugador { get; set; }
         public string Posicion { get; set; }
         public int Edad { get; set; }
-        [ForeignKey("Equipos")]
+        [ForeignKey("IdEquipo")]
         public Equipos Equipos { get; set; }
 
     }

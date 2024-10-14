@@ -11,7 +11,7 @@ namespace Taller_en_clase_EquiposFutbol.Models
         public string Ciudad { get; set; }
         public string TitulosEquipo { get; set; }
         public bool AdmiteExtranjeros { get; set; }
-        [ForeignKey("Estadio")]
+        [ForeignKey("IdEstadio")]
         public Estadio Estadio { get; set; }
 
     }

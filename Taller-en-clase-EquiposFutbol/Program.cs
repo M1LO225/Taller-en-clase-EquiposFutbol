@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Taller_en_clase_EquiposFutbol.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Taller_en_clase_EquiposFutbolContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Taller_en_clase_EquiposFutbolContext") ?? throw new InvalidOperationException("Connection string 'Taller_en_clase_EquiposFutbolContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
